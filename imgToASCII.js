@@ -40,6 +40,9 @@ function imgToASCII(url, options = {width: null, height: null, inverted: false},
     })
 }
 
+//my attempt at doing webcam stuff
+
+/*
 var opts = {
     width: 1280,
     height: 720,
@@ -58,11 +61,11 @@ function camToASCII() {
         console.log(err,data)
     });
 }
+*/
 
 module.exports = {
     imgToASCII,
     rgbaToASCII,
-    camToASCII,
     setChars,
     brightnessChars,
 }
