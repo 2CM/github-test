@@ -1,4 +1,5 @@
 const jimp = require("jimp");
+const nodewebcam = require("node-webcam");
 
 var brightnessChars = "@#${>(+=~- ";
 
@@ -39,8 +40,29 @@ function imgToASCII(url, options = {width: null, height: null, inverted: false},
     })
 }
 
+var opts = {
+    width: 1280,
+    height: 720,
+    quality: 100,
+    frames: 30,
+    output: "png",
+    delay: 0,
+    device: false,
+    callbackReturn: "location",
+}
+
+var webcam = nodewebcam.create(opts)
+
+function camToASCII() {
+    webcam.capture("hello", opts, function(err, data) {
+        console.log(err,data)
+    });
+}
+
 module.exports = {
     imgToASCII,
     rgbaToASCII,
+    camToASCII,
+    setChars,
     brightnessChars,
 }
