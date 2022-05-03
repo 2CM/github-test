@@ -54,7 +54,7 @@ function promptUrl() {
     urlInput.question("url to convert to image: ", function(res) {
         let args = res.split(" ");
 
-        //https://i.imgur.com/v7K17lb.png
+        //good image to use: https://i.imgur.com/v7K17lb.png
 
         imgToASCII(args[0], {width: Number(args[1]), height: Number(args[1]), inverted: Boolean(args[2])}, function(ascii) {
             console.log(ascii);
