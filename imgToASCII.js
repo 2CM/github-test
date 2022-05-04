@@ -1,5 +1,5 @@
 const jimp = require("jimp");
-const nodewebcam = require("node-webcam");
+//const nodewebcam = require("node-webcam");
 
 var brightnessChars = "@#${>(+=~- ";
 
